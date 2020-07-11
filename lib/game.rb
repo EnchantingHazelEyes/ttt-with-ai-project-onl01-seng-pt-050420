@@ -38,7 +38,6 @@ class Game
       draw?
     else
     puts "Invalid Move"
-      #@board.display
       turn
     end
     @board.display
