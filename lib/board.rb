@@ -31,7 +31,7 @@ def initialize
   end
   
   def turn_count 
-    @cells.count{|token| token == "X" || token == "O"}
+    @cells.count{|cells| cells == "X" || cells == "O"}
   end
   
   def taken?(input)
