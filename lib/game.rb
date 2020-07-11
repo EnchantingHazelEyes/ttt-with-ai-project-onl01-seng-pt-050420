@@ -58,11 +58,11 @@ class Game
     return false
   end
   
-   def draw? #Checks methods won for false & full for true, then game is a draw
+   def draw? 
     @board.full? && !won?
   end
   
-  def over? #If the game is won or a draw, game is now over
+  def over? 
     won? || draw?
   end
   
@@ -72,7 +72,7 @@ class Game
     end
   end
   
-    def play #Checks if game is over, if false, next turn; if won, congrats;
+    def play 
       while over? == false
         turn
        end
