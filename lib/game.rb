@@ -44,9 +44,8 @@ class Game
    end
   
    def won? #Double checks if the combo inputted has won
-    WIN_COMBINATIONS.each {
-      |combo|
-      @board.cells[combo[0]] == "X" && @board.cells[combo[1]] == "X" && @board.cells[combo[2]] == "X"
+    WIN_COMBINATIONS.each |combo|
+      @board.cells[combo[0]] && @board.cells[combo[1]] && @board.cells[combo[2]] == " "
     }
     b = WIN_COMBINATIONS.find{
       |combo|
