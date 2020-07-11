@@ -74,7 +74,7 @@ class Game
   
     def play 
       @board.reset!
-      until over? = false
+      until over? == false
         turn
        end
       if won?
