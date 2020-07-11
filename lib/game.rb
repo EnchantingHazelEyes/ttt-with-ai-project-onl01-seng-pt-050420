@@ -2,14 +2,21 @@ class Game
   
   attr_accessor :board, :player_1, :player_2, :input, :computer_1, :computer_2
 
-  def initialize(player_1 = Players::Human.new("X"), player_2 = Players::Human.new("O"), 
-    computer_1 = Players::Computer.new("X"), computer_2 = Players::Computer.new("O"), board = Board.new) 
+  def initialize(player_1 = Players::Human.new("X"), player_2 = Players::Human.new("O"), board = Board.new) 
     @player_1 = player_1
     @player_2 = player_2 
     @computer_1 = computer_1
     @computer_2 = computer_2
     @board = board
     
+  end 
+  
+  def computer_1(computer_1 = Players::Computer.new("X"))
+    @computer_1 = computer_1
+  end 
+  
+  def computer_2(computer_2 = Players::Computer.new("O"))
+    @computer_2 = computer_2
   end 
 
 
