@@ -59,7 +59,7 @@ class Game
   end
   
    def draw? #Checks methods won for false & full for true, then game is a draw
-    !won? && @board.full?
+    @board.full? && !won?
   end
   
   def over? #If the game is won or a draw, game is now over
