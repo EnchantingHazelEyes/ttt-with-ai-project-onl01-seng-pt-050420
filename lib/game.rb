@@ -44,9 +44,14 @@ class Game
    end
   
    def won? #Double checks if the combo inputted has won
-    WIN_COMBINATIONS.each do |combo|
-      @board.cells[combo[0]] == @board.cells[combo[1]] && @board.cells[combo[1]] == @board.cells[combo[2]] && @board.cells[combo[0]] != " "
-    end
+     WIN_COMBINATIONS.each do |combo|
+        if @board.cells[combination[0]] == @board.cells[combination[1]] &&
+          @board.cells[combination[1]] == @board.cells[combination[2]] &&
+          @board.taken?(combination[0]+1)
+          return combo
+        end
+      end
+    return false
   end
   
    def draw? #Checks methods won for false & full for true, then game is a draw
