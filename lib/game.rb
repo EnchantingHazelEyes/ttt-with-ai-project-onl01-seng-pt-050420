@@ -73,8 +73,7 @@ class Game
   end
   
     def play 
-      while over? == false
-        turn
+      turn until over? == false
        end
       if won?
        puts "Congratulations #{winner}!"
