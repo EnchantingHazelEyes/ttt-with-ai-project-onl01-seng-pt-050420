@@ -74,7 +74,6 @@ class Game
   
     def play 
       turn until over? == false
-       end
       if won?
        puts "Congratulations #{winner}!"
       elsif draw?
