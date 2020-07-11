@@ -68,7 +68,7 @@ class Game
   
   def winner 
     if won?
-      @board.cells[won?[0]] == "X" ? "X" : "O"
+      @board.cells[won?[0]] =
     else
       nil
     end
