@@ -45,12 +45,7 @@ class Game
   
    def won? #Double checks if the combo inputted has won
     WIN_COMBINATIONS.each |combo|
-      @board.cells[combo[0]] && @board.cells[combo[1]] && @board.cells[combo[2]] == " "
-    }
-    b = WIN_COMBINATIONS.find{
-      |combo|
-      @board.cells[combo[0]] == "O" && @board.cells[combo[1]] == "O" && @board.cells[combo[2]] == "O"
-    }
+      @board.cells[combo[0]] == @board.cells[combo[1]] && @board.cells[combo[1]] == @board.cells[combo[2]] && @board.cells[combo[0]] != " "
     return a || b
   end
   
