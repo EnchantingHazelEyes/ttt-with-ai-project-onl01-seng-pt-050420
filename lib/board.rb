@@ -39,7 +39,7 @@ def initialize
   end 
 
   def valid_move?(index) 
-    index.between?("0","8") && !taken?(index)
+    index.between?("1","9") && !taken?(index)
   end
 
    def update(position, player)
