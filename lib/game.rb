@@ -73,8 +73,7 @@ class Game
   end
   
     def play 
-     # @board.reset!
-      while over? == false
+      until over? == false
         turn
        end
       if won?
